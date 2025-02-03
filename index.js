@@ -26,12 +26,12 @@ if(!password){
 return res.status(200).json({
     message:"login successful",
     data:{
-        email:email
+        email: email
     }
 
 });
 
 app.listen(3000,()=>{
-    console.log("server is running");
+    console. log("server is running");
 
 });
