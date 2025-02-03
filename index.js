@@ -7,20 +7,24 @@ app.get('/',(req,res)=>{
 });
 
 app.post('/login',(req,res)=>{
-    const{username,email,password}=req.body;
+    const{username,email,password,dateofbirth}=req.body;
 });
 
 
 if(!username){
-    return res.status(400).json({message:"username cannot be empty"})
+    return res.status(400).json({message:"Username cannot be empty"})
 }
 
 if(!email){
-    return res.status(400).json({message:"email cannot be empty"})
+    return res.status(400).json({message:"Email cannot be empty"})
 };
 
 if(!password){
-    return res.status(400).json ({message:"password length should be greater than 8 or less than or equal to 16 "})
+    return res.status(400).json ({message:"Password length should be greater than 8 or less than or equal to 16 "})
+};
+
+if(!dateofbirth){
+    return res.status(400).json ({message:"dateofbirth cannot be empty"})
 };
 
 return res.status(200).json({
